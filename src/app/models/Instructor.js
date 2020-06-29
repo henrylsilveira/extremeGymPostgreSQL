@@ -73,6 +73,7 @@ module.exports = {
         FROM instructors 
         LEFT JOIN members ON (instructors.id = members.instructor_id)
         WHERE instructors.name ILIKE '%${filter}%'
+        OR instructors.services ILIKE '%${filter}%'
         GROUP BY instructors.id
         ORDER BY total_students ASC`, function(err, results){
             if(err) throw `Database Error!${err}` ;
