@@ -258,7 +258,7 @@ tbody tr td:first-child span {
     border: 2px solid #303030;
 }
 
-tbody tr td:last-child a, .table-container a:first-child {
+tbody tr td:last-child a, .table-container table a:first-child {
     background-color: #6bc03b;
     padding: 8px 16px;
     text-decoration: none;
@@ -305,4 +305,33 @@ tbody tr td:last-child a, .table-container a:first-child {
 .table-container .header form button {
     margin: 0;
     border-radius: 8px;
+}
+
+/* Pagination */
+.table-container {
+    display: grid;
+    grid-template: 64px 1fr 16px / 1fr;
+}
+
+.table-container .header {
+    margin: 0;
+    align-self: start;
+}
+
+.table-container .pagination {
+    margin: 0;
+    align-self: end;
+    justify-self: center;
+}
+
+.pagination a, .pagination span {
+    color: #f1a128;
+    text-decoration: none;
+    margin-right: 16px;
+    font-size: 18px;
+}
+
+.pagination a:hover{
+    filter: brightness(0.3);
+    border-bottom: 1px solid #f1a128;
 }
